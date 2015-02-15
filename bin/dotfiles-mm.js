@@ -31,7 +31,6 @@ fs.mkdirAsync(projectName, '0750')
     .then(function moveDotFiles() {
         return Promise.map(filesToCopy, function (file) {
             return new Promise(function (resolve, reject) {
-                console.log(file);
                 fs.createReadStream(path.resolve(__dirname, '../', file))
                     .on('error', reject)
                     .pipe(fs.createWriteStream(projectName + '/' + file))
