@@ -1,0 +1,31 @@
+{
+  "name": "dotfiles-mm",
+  "version": "1.0.0",
+  "description": "generates project boilterplate with included dotfiles",
+  "main": "bin/dotfiles-mm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dotfiles-mm": "./bin/dotfiles-mm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AVVS/dotfiles.git"
+  },
+  "keywords": [
+    "dotfiles",
+    "generator",
+    "boilterplate"
+  ],
+  "author": "Vitaly Aminev <v@makeomatic.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AVVS/dotfiles/issues"
+  },
+  "homepage": "https://github.com/AVVS/dotfiles",
+  "dependencies": {
+    "bluebird": "^2.9.9",
+    "minimist": "^1.1.0"
+  }
+}
