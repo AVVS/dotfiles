@@ -37,7 +37,7 @@ fs.mkdirAsync(projectName, '0750')
             return new Promise(function (resolve, reject) {
                 fs.createReadStream(path.resolve(__dirname, '../', from))
                     .on('error', reject)
-                    .pipe(fs.createWriteStream(projectName + '/' + to))
+                    .pipe(fs.createWriteStream(projectName + '/' + dest))
                     .on('error', reject)
                     .on('finish', resolve);
             });
