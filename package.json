@@ -1,6 +1,6 @@
 {
   "name": "dotfiles-mm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "generates project boilterplate with included dotfiles",
   "main": "bin/dotfiles-mm.js",
   "scripts": {
