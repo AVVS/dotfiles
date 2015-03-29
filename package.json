@@ -1,6 +1,6 @@
 {
   "name": "dotfiles-mm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "generates project boilterplate with included dotfiles",
   "main": "bin/dotfiles-mm.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/AVVS/dotfiles",
   "dependencies": {
     "bluebird": "^2.9.9",
+    "express": "^4.11.2",
     "minimist": "^1.1.0"
   }
 }

@@ -10,8 +10,8 @@ var path = require('path');
 var filesToCopy = [
     '.npmignore',
     '.editorconfig',
-    '.gitignore',
-    '.jshintrc'
+    '.jshintrc',
+    '_gitignore:.gitignore'
 ];
 
 // project name
@@ -30,10 +30,14 @@ fs.mkdirAsync(projectName, '0750')
     })
     .then(function moveDotFiles() {
         return Promise.map(filesToCopy, function (file) {
+            var from, dest, spl;
+            spl = file.split(':');
+            from = spl[0];
+            dest = spl[1] || from;
             return new Promise(function (resolve, reject) {
-                fs.createReadStream(path.resolve(__dirname, '../', file))
+                fs.createReadStream(path.resolve(__dirname, '../', from))
                     .on('error', reject)
-                    .pipe(fs.createWriteStream(projectName + '/' + file))
+                    .pipe(fs.createWriteStream(projectName + '/' + to))
                     .on('error', reject)
                     .on('finish', resolve);
             });
